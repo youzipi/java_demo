@@ -2,20 +2,19 @@ package com.example.web;
 
 import com.example.model.BeerExpert;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Iterator;
 import java.util.List;
 
 
 /**
  * project_name:java_demo
  * package_name:com.example.web
- * user: Administrator
+ * user: youzipi
  * date: 2014/8/26
  */
 public class BeerSelect extends HttpServlet {
@@ -29,13 +28,17 @@ public class BeerSelect extends HttpServlet {
         List result = be.getBrands(c);
 
 
-        response.setContentType("text/html");
+/*        response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("Beer Selection Advice");
         //out.println("<br>Got beer color " + c);
         Iterator it = result.iterator();
         while (it.hasNext()){
             out.print("<br>Try: " + it .next());
-        }
+        }*/
+
+        request.setAttribute("styles", result); //为请求对象增加styles属性
+        RequestDispatcher view = request.getRequestDispatcher("result.jsp");        //为JSP实例化一个请求分派器
+        view.forward(request, response);
     }
 }
