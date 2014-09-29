@@ -1,0 +1,107 @@
+
+/* FONT PATH
+ * -------------------------- */
+
+@font-face {
+    font-family: "fontdiao";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/fontdiao.eot");
+    src: url("../fonts/fontdiao.eot?#iefix") format('embedded-opentype'), url("../fonts/fontdiao.svg#fontdiao") format('svg'), url("../fonts/fontdiao.woff") format('woff'), url("../fonts/fontdiao.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: "fontdiao";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/fontdiao.eot");
+    src: url("../fonts/fontdiao.eot?#iefix") format('embedded-opentype'), url("../font/fontdiao.svg#fontdiao") format('svg'), url("../font/fontdiao.woff") format('woff'), url("../font/fontdiao.ttf") format('truetype');
+}
+
+a {
+    text-decoration: none;
+    color: #191919;
+}
+
+a:hover,
+a:focus {
+    outline: 0;
+    text-decoration: none;
+    -webkit-transition: color 0.25s, background 0.5s;
+    -moz-transition: color 0.25s, background 0.5s;
+    -o-transition: color 0.25s, background 0.5s;
+    -ms-transition: color 0.25s, background 0.5s;
+    transition: color 0.25s, background 0.5s;
+}
+a:hover:before {
+    -webkit-transition: color 0.25s, background 0.5s;
+    -moz-transition: color 0.25s, background 0.5s;
+    -o-transition: color 0.25s, background 0.5s;
+    -ms-transition: color 0.25s, background 0.5s;
+    transition: color 0.25s, background 0.5s;
+}
+
+.social-font a:hover:before {
+    color: #1a5e88;
+}
+
+.social-font a {
+    float: left;
+    display: block;
+    /*width: 14%;*/
+    font-size: 200%;
+    padding: 0.5em;
+}
+.clearfix {
+    zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.icon-weibo:before,
+.icon-github:before,
+.icon-twitter:before,
+.icon-facebook:before,
+.icon-stack-overflow:before,
+.icon-email:before {
+    font-family: "FontAwesome";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-weibo:before {
+    content: "\f18a";
+
+}
+.icon-github:before {
+    content: "\f09b";
+}
+.icon-twitter:before {
+    content: "\f099";
+}
+.icon-facebook:before {
+    content: "\f09a";
+}
+.icon-stack-overflow:before {
+    content: "\f16c";
+}
+
+.icon-douban:before {
+    font-family: "fontdiao";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f111";
+}
+
+
+.icon-zhihu:before {
+    font-family: "fontdiao";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f145";
+}
