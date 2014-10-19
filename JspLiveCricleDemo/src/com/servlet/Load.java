@@ -3,7 +3,7 @@ package com.servlet;
 
 import com.bean.News;
 import com.dao.newsDAO;
-import org.json.JSONObject;
+import net.sf.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -47,6 +47,8 @@ public class Load {
         return jObject;
 
     }
+
+
 
     public JSONObject loadNews(int key){
 

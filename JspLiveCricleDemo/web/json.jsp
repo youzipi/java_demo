@@ -1,6 +1,4 @@
-<%@ page import="com.servlet.Load" %>
-<%@ page import="org.json.JSONObject" %>
-<%@ page import="java.sql.Connection" %>
+<%@ page import="net.sf.json.JSONObject" %>
 <%--
   Created by IntelliJ IDEA.
   User: Administrator
@@ -12,7 +10,7 @@
 <%  %>
 <jsp:useBean id="news" class="com.bean.News" scope="page" />
 <jsp:useBean id="load" class="com.servlet.Load" scope="page" />
-<jsp:useBean id="conn" class="com.jdbc.GetConn" scope="page" />
+<jsp:useBean id="conn" class="com.jdbc.DB" scope="page" />
 
 <html>
 <head>
@@ -29,6 +27,8 @@
 /*    Connection con = conn.getConnection();
     out.print(con);*/
 %>
+<script>
 
+</script>
 </body>
 </html>

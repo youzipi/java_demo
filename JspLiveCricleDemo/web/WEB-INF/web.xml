@@ -11,5 +11,29 @@
         <error-code>404</error-code>
         <location>/404.swf</location>
     </error-page>
+    <servlet>
+        <servlet-name>Ajax</servlet-name>
+        <servlet-class>com.Ajax</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ajax</servlet-name>
+        <url-pattern>/Ajax</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>doNews</servlet-name>
+        <servlet-class>com.doNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doNews</servlet-name>
+        <url-pattern>/doNews</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>nicebuild.servlet.TestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/TestServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

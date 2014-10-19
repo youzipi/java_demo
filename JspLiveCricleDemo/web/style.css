@@ -1,0 +1,75 @@
+@CHARSET "UTF-8";
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body{
+		width: 100%;
+		height: 100%;
+		overflow:hidden;
+		background: url("bgz.jpg") no-repeat left top;
+	}
+	#container{
+		width: 966px;
+		height: 560px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin: -280px 0px 0px -480px;
+	}
+	.blocks{
+		position: absolute;
+		padding: 2px;		
+		border: 1px solid #999;
+		background: #fff;
+		
+	}
+	.bbs{
+		top: 0px;
+		width: 256px;
+		height: 368px;
+	}
+	.news{
+		top: 375px;
+		width: 508px;
+		height: 181px;
+	}
+	.blogs{		
+		top: 0px;
+		left: 264px;
+		width: 498px;
+		height: 181px; 
+	}
+	.resource{
+		top: 189px;
+		left: 516px;
+		width: 246px;
+		height: 367px; 
+	}
+	.logger{
+		top: 189px;
+		left: 264px;
+		width: 244px;
+		height: 179px; 
+	}
+	.right{
+		width: 180px;
+		height: 180px;
+		right: 0px;
+	}
+	.mytask{
+		top: 0px;
+	}
+	.codeShare{
+		top: 188px;
+	}
+	.rss{
+		top: 376px;
+	}
+	.leftBarMenu{
+		position:absolute;
+		height: 100%;   
+		width: 40px;
+		border-left: 1px solid #000;
+		background: #eee;
+	}

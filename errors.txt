@@ -1,0 +1,5 @@
+错误: 代理抛出异常错误: java.rmi.server.ExportException: Port already in use: 1099; nested exception is: java.net.BindException: Address already in use: JVM_Bind
+原因：端口占用，
+现象：IDEA关闭后，localhost:8080/.. 还可以访问
+解决：tomcat\bin目录下shutdown
+D:\apache-tomcat-7.0.52\bin\shutdown.bat

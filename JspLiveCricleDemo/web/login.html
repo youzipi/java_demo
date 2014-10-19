@@ -1,0 +1,38 @@
+<html>
+<body>
+<script>
+    var xmlhttp = null;
+    function submit(){
+        if (window.XMLHttpRequest){
+            xmlhttp = new XMLHttpRequest;
+            console.log(xmlhttp);
+        }
+        else if (window.ActiveXObject){
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //return xmlhttp;
+        var name = document.getElementById("name").value;
+        console.log(name == null || name == "");
+        //console.log("name:"+name+"end");
+        xmlhttp.open("GET","Ajax?name="+name,true);
+        xmlhttp.onreadystatechange = callback;
+        xmlhttp.send(null);
+    }
+    function callback(){
+        //console.log(xmlhttp.readyState);
+       // console.log(xmlhttp.status);
+
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+            var message = xmlhttp.responseText;
+            console.log("message:"+message);
+            var messageNode = document.getElementById("message");
+            messageNode.innerHTML = message;
+        }
+    }
+</script>
+<div>name:</div>
+<input type="text" id="name"/>
+<input type="button" value="submit" onclick="submit()"><br>
+<div id="message"></div>
+</body>    
+</html>
