@@ -1,4 +1,4 @@
-package com.jdbc;
+package jdbc;
 
 import java.sql.*;
 
@@ -10,7 +10,7 @@ import java.sql.*;
  * jdbc封装
  */
 public class DB {
-    static String url = "jdbc:mysql://localhost:3306/imagenews";
+    static String url = "jdbc:mysql://localhost:3306/lib";
     static String classname= "com.mysql.jdbc.Driver";
     static String username = "root";
     static String password = "123456";
@@ -41,18 +41,20 @@ public class DB {
         try{
             conn=getConnection();
             stmt=conn.createStatement();
+            stmt.execute("set names utf8;");
         }catch(Exception e){e.printStackTrace(System.err);}
         return stmt;
     }
-
 
     public Statement getStmed(){
         try{
             conn=getConnection();
             stmt=conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
+            stmt.execute("set names utf8;");
         }catch(Exception e){e.printStackTrace(System.err);}
         return stmt;
     }
+
     public ResultSet getrs(String sql){
         if(sql==null)sql="";
         try{
@@ -69,6 +71,7 @@ public class DB {
         }catch(SQLException e){e.printStackTrace();}
         return rs;
     }
+
     public int update(String sql){
         int num=0;
         if(sql==null)sql="";
@@ -85,6 +88,7 @@ public class DB {
         try{
             stmt=getStmed();
             ok=stmt.execute(sql);
+            //System.out.println("okkkk="+ok);
             return true;
         }catch(SQLException e){e.printStackTrace();}
         return false;
@@ -100,6 +104,12 @@ public class DB {
         try{
             if(conn!=null)conn.close();
         }catch(Exception e){e.printStackTrace();}
+    }
+
+    public static void main(String[] args) {
+        DB db = new DB();
+        ResultSet rs = db.getrs("select * from user");
+        System.out.println(rs);
     }
 }
 

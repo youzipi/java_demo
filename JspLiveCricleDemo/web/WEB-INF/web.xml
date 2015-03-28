@@ -35,5 +35,13 @@
         <servlet-name>TestServlet</servlet-name>
         <url-pattern>/TestServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>deleteNews</servlet-name>
+        <servlet-class>com.servlet.deleteNews</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteNews</servlet-name>
+        <url-pattern>/newsdelete</url-pattern>
+    </servlet-mapping>
 
 </web-app>
