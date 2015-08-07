@@ -1,5 +1,7 @@
-´íÎó: ´úÀíÅ×³öÒì³£´íÎó: java.rmi.server.ExportException: Port already in use: 1099; nested exception is: java.net.BindException: Address already in use: JVM_Bind
-Ô­Òò£º¶Ë¿ÚÕ¼ÓÃ£¬
-ÏÖÏó£ºIDEA¹Ø±Õºó£¬localhost:8080/.. »¹¿ÉÒÔ·ÃÎÊ
-½â¾ö£ºtomcat\binÄ¿Â¼ÏÂshutdown
+é”™è¯¯: ä»£ç†æŠ›å‡ºå¼‚å¸¸é”™è¯¯: java.rmi.server.ExportException: Port already in use: 1099; nested exception is: java.net.BindException: Address already in use: JVM_Bind
+åŸå› ï¼šç«¯å£å ç”¨ï¼Œ
+ç°è±¡ï¼šIDEAå…³é—­åï¼Œlocalhost:8080/.. è¿˜å¯ä»¥è®¿é—®
+è§£å†³ï¼š
+- tomcat\binç›®å½•ä¸‹shutdown
 D:\apache-tomcat-7.0.52\bin\shutdown.bat
+- kill javac.exe process
